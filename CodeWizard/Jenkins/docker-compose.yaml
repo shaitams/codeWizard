@@ -1,0 +1,14 @@
+version: "3.8"
+    
+services:
+  jenkins_casc_svc:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: codewizard:jenkins
+        container_name: jenkins_casc
+        environment: 
+            JENKINS_ADMIN_ID: codeWizard
+            JENKINS_ADMIN_PASSWORD: notJunior
+        ports: 
+            - 8080:8080
